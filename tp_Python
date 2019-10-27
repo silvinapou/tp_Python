@@ -1,0 +1,172 @@
+¿QUE ES GIT?
+
+Git es un software de control de versiones diseñado por Linus Torvalds, pensando en la eficiencia y la confiabilidad del mantenimiento de versiones de aplicaciones cuando éstas tienen un gran número de archivos de código fuente. Su propósito es llevar registro de los cambios en archivos de computadora y coordinar el trabajo que varias personas realizan sobre archivos compartidos.
+
+Al principio, Git se pensó como un motor de bajo nivel sobre el cual otros pudieran escribir la interfaz de usuario o front end como Cogito o StGIT. ​Sin embargo, Git se ha convertido desde entonces en un sistema de control de versiones con funcionalidad plena. ​Hay algunos proyectos de mucha relevancia que ya usan Git, en particular, el grupo de programación del núcleo Linux.
+
+¿QUE ES GITHUB?
+
+GitHub es una plataforma de desarrollo colaborativo de software para alojar proyectos utilizando el sistema de control de versiones Git.
+El código se almacena de forma pública, aunque también se puede hacer de forma privada, creando una cuenta de pago.
+
+¿QUE ES GITLAB?
+
+Gitlab es un servicio web de control de versiones y desarrollo de software colaborativo basado en Git. Además de gestor de repositorios, el servicio ofrece también alojamiento de wikis y un sistema de seguimiento de errores, todo ello publicado bajo una Licencia de código abierto.
+
+DIFERENCIAS
+
+Tanto GitLab como GitHub ofrecen un plan gratuito similar. Sin embargo para algunos usuarios puede ser interesante iclinarse por una opción u otra. Especialmente hay que destacar el espacio disponible que ofrece GitLab para crear un repositorio, ya que estamos hablando de 10 veces más capacidad.
+
+Como sabemos, GitHub fue comprado por Microsoft hace unos meses. Eso provocó que muchos usuarios buscaran una alternativa a esta plataforma. Es por ello por lo que GitLab comenzó a ganar seguidores. Muchos creían que el servicio podía empeorar o comenzar a ofrecer peores prestaciones. Sin embargo, como hemos visto ahora que ha añadido la posibilidad de crear repositorios privados gratuitos, en algunos aspectos ha mejorado.
+
+¿COMO SE USA Y CUAL ES SU PROPOSITO GENERAL?
+
+Además del hosting remoto para repositorios GitLab ofrece una interfaz web para controlar el repositorio y muchas otras herramientas. Ofrece la posibilidad de examinar el código en cualquiera de sus versiones, realizar acciones relacionadas con el sistema de repositorios como mergear el código de versiones de proyecto o gestionar las "pull request" (que en GitLab se llaman "merge request"), automatizar procesos como el despliegue o la ejecución de pruebas del software, etc. Toda esta operativa se realiza o configura en GitLab por medio de una web.
+
+Por tanto, para usar GitLab simplemente se necesitan las mismas herramientas que ya se utilizan diariamente, el terminal o un programa de interfaz gráfica para gestionar el repositorio, así como el navegador web para acceder a el ecosistema de herramientas disponible en el sitio de GitLab. Por supuesto, todas estas herramientas se pueden usar desde cualquier ordenador conectado a Internet, independientemente del sistema operativo.
+
+¿QUIENES PUEDEN USAR SUS DATOS?
+
+Los usuarios en Gitlab son las cuentas que abre la gente. Las cuentas de usuario no tienen ninguna complicación: viene a ser una colección de información personal unida a la información de login. Cada cuenta tiene un espacio de nombres que es una agrupación lógica de los proyectos que pertenecen al usuario. De este modo, si el usuario jane tiene un proyecto llamado project, la URL de ese proyecto sería http://server/jane/project.
+
+¿QUE PROYECTOS COLOCARIAS EN GITHUB Y CUALES EN GITLAB?¿PORQUE?
+
+Si es un gran proyecto de software libre, con una enorme comunidad detrás, con desarrolladores de todo el mundo y queremos tener un entorno accesible y siempre va a ser un proyecto de software libre, GitHub puede ser una plataforma excelente.
+
+Si empezamos a usar GitLab y llega un momento en el que el código ya no conviene tenerlo en la nube, siempre se lo puede montar un servidor local, con lo cual es un plus de la herramienta GitLab respecto a GitHub en proyectos que en algún momento pueden llegar a convertirse en un proyecto que no convenga tener almacenado en la nube.
+
+¿CUALES SON SUS PRINCIPALES COMANDOS?¿COMO SE USAN?
+
+-git config
+	Uno de los comandos más usados en git es git config, que puede ser usado para establecer una configuración específica de usuario, como sería el caso del email, 
+	 Por ejemplo, el siguiente comando se usa para establecer un email:
+		git config --global user.email sam@google.com
+--git init
+	Este comando se usa para crear un nuevo repertorio GIT:
+		git init
+--git add
+	Este comando puede ser usado para agregar archivos al index. Por ejemplo, el siguiente comando agrega un nombre de archivo temp.txt en el directorio local del index:
+		git add temp.txt
+--git clone
+	Este comando se usa con el propósito de revisar repositorios. Si el repositorio está en un servidor remoto se tiene que usar el siguiente comando:
+		git clone alex@93.188.160.58:/path/to/repository
+
+	Pero si estás por crear una copia local funcional del repertorio, usa el comando:
+     		git clone /path/to/repository
+--git commit
+	El comando commit es usado para cambiar a la cabecera. Uso:
+		git commit –m “Message to go with the commit here”
+--git status
+	Este comando muestra la lista de los archivos que se han cambiado junto con los archivos que están por ser añadidos o comprometidos.
+		git status
+--git push
+	Este es uno de los comandos más básicos. Un simple push envía los cambios que se han hecho en la rama principal de los repositorios remotos que están asociados con el directorio que está 	trabajando. Por ejemplo:
+		git push  origin master
+--git checkout
+	El comando checkout se puede usar para crear ramas o cambiar entre ellas. Por ejemplo, el siguiente comando crea una nueva y se cambia a ella:
+		command git checkout -b <banch-name>
+	Para cambiar de una rama a otra solo usa:
+		git checkout <branch-name>
+--git remote
+	El comando se usa para conectar a un repositorio remoto. El siguiente comando muestra los repositorios remotos que están configurados actualmente:
+		git remote -v
+	Este comando te permite conectar al usuario con el repositorio local a un servidor remoto:
+		git remote add origin <93.188.160.58>
+--git branch
+	Este comando se usa para listar, crear o borrar ramas. Para listar todas las ramas se usa:
+		git branch
+	para borrar la rama:
+		git branch -d <branch-name>
+--git pull
+	Para poder fusionar todos los cambios que se han hecho en el repositorio local trabajando, el comando que se usa es:
+		git pull
+--git merge
+	Este comando se usa para fusionar una rama con otra rama activa:
+		git merge <branch-name>
+--git diff
+	Este comando se usa para hacer una lista de conflictos. Para poder ver conflictos con el archivo base usa:
+		git diff --base <file-name>
+	El siguiente comando se usa para ver los conflictos que hay entre ramas que están por ser fusionadas para poder fusionarlas sin problemas:
+		git diff <source-branch> <target-branch>
+	Para solo ver una lista de todos los conflictos presentes usa:
+		git diff
+--git tag
+	Tag se usa para marcar commits específicos con asas simples. Por ejemplo:
+		git tag 1.1.0 <instert-commitID-here>
+--git log
+	Ejecutar este comando muestra una lista de commits en una rama junto con todos los detalles. Por ejemplo:
+		commit 15f4b6c44b3c8344caasdac9e4be13246e21sadw
+--git reset
+	Para resetear el index y el directorio que está trabajando al último estado comprometido se usa este comando:
+		git reset - -hard HEAD
+--git rm
+	Este comando se puede usar para remover archivos del index y del directorio que está trabajando:
+		git rm filename.txt
+--git stash
+	Este es uno de los comandos menos conocidos, pero ayuda a salvar cambios que no están por ser comprometidos inmediatamente, pero temporalmente:
+		git stash
+--git show
+	Se usa para mostrar información sobre cualquier objeto git. Por ejemplo:
+		git show
+--git fetch
+	Este comando le permite al usuario buscar todos los objetos de un repositorio remoto que actualmente no reside en el directorio local que está trabajando. Por ejemplo:
+		git fetch origin
+--git ls-tree
+	Para ver un objeto de árbol junto con el nombre y modo de cada uno de ellos, y el valor binario SHA-1, se usa:
+		git ls-tree HEAD
+--git cat-file
+	Usando el valor SHA-1, se puede ver el tipo de objeto usando este comando. Por ejemplo:
+		git cat-file –p d670460b4b4aece5915caf5c68d12f560a9fe3e4
+--git grep
+	Este comando le permite al usuario buscar en los árboles de contenido cualquier frase o palabra. Por ejemplo, para buscar por www.tupaginaweb.com en todos los archivos se usaría:
+		git grep “www.tupaginaweb.com”
+--gitk
+	Este es la interfaz gráfica para un repositorio local que puede invocar escribiendo y ejecutando:
+		gitk
+--git instaweb
+	Con este comando un servidor web puede correr interconectado con el repositorio local. Un navegador web también está automáticamente dirigido a el:
+		git instaweb –http=webrick
+--git gc
+	Para optimizar el repositorio por medio de una recolección de basura, que limpiara archivos innecesarios y los optimizara, usa:
+		git hc
+--git archive
+	Este comando le permite al usuario crear archivos zip o tar que contengan los constituyentes de un solo árbol de repositorio:
+		git archive – -format=tar master
+--git prune
+	Con este comando los objetos que no tengan ningún puntero entrante serán eliminados:
+		git prune
+--git fsck
+	Para poder hacer un chequeo de integridad del sistema de archivos git, usa este comando. Cualquier objeto corrompido será detectado:
+		git fsck
+--git rebase
+	Este comando se usa para la re aplicación de los compromisos en otra rama. Por ejemplo:
+		git rebase master
+
+Aporte en grupo:
+
+•	¿Que utilidad encontras git?
+Es una plataforma de desarrollo colaborativo de software para alojar proyectos utilizando el sistema de control de versiones Git.
+
+•	¿Que ventajas y desventajas tiene usar git como sistema de seguridad?.
+•	Seguridad : Pero… ¿y si tengo un sistema de control de versiones instalado en local y tengo una caída de la tensión eléctrica que provoca el apagado de la infraestructura? ¿Los datos se habrán corrompido en el proceso de escritura? La respuesta es que resultaría muy complejo, ya que en su inmensa mayoría, los controladores de versiones cuentan con sistemas de cifrado y otros tipos de medidas de seguridad que se aplicarán para que nuestros datos permanezcan lo más íntegros posible. Por poner un ejemplo, Git hace uso de sistemas de árbol SHA1 , lo que asegurará que hasta que no se realice la comprobación del cifrado o firma, los cambios no se escribirán en el servidor.
+
+•	¿Que ventajas y desventajas tiene usar git como sistema de trabajo en grupo?
+Ventajas
+•	Compartición selectiva : El desarrollo de la aplicación serán únicamente nuestro, pudiendo decidir qué parte de nuestro proyecto compartimos y con quién, restringiendo a que sólo pueda verlo, que tenga la posibilidad de añadir notas, comentarios o que pueda añadir cambios. No todo tiene porque ser público (aunque en la compartición encontramos la riqueza y agilidad que fundamenta el software libre ;).
+ 
+•	Velocidad : Muchas empresas deciden implementar GIT como servicio local en su infraestructura física, por lo tanto el control de versiones se realizaría dentro de la propia red con la consiguiente ganancia en velocidad de acceso y escritura, así como eliminando el requisito de contar con una conexión a internet obligatoria. No obstante (como ya se verá en el curso de Git, GitHub y GitLab , contar con el respaldo de un hosting para estos menesteres siempre es un plus de seguridad pues ganaremos la despreocupación para con respecto de la seguridad y accesibilidad de nuestro trabajo.
+ 
+•	Ramificación : Ya hablamos de la ramificación en una entrada anterior , y como vimos ofrece un amplio abanico de posibilidades a la hora de realizar cambios en la estructura principal, pudiendo crear diferentes ramas sobre las que aplicar nuestras modificaciones en entornos aislados de la línea principal de desarrollo.
+ 
+•	Convergencia : Si en la creación de una rama del proyecto encontramos que uno de los cambios incluidos se integra tal y como deseamos, sin presentar conflictos con las diferentes partes de nuestra aplicación, podremos incluir o hacer converger dicha ramificación con el desarrollo principal de forma sencilla y segura, contando así con una nueva versión o revisión de nuestro proyecto lista para ser distribuida, compartida, liberada…
+ 
+•	Sandbox : Esta sería una ventaja de una ventaja, ya que las ramificaciones nos preparan un entorno aislado de pruebas sobre el desarrollo de la línea central de nuestra app. Los cambios realizados en una de las ramas del proyecto no tendrán consecuencias para los usuarios que actualmente usen o accedan a la versión sin modificar o principal. Muy útil si lo que vamos a hacer es incluir servicios que antes no existían en nuestra aplicación y esto pudiese poner en peligro la estabilidad de otros componentes.
+ 
+•	Flujo de trabajo adaptable : En el sector de los controladores de versiones encontraremos diferentes formas para gestionar el flujo de desarrollo de la aplicación, destacando entre éstos los modelos centralizados y los modelos de libre configuración. Con esto encontramos que trabajemos como trabajemos encontraremos un control de versiones que se adapte a nosotros o nuestra empresa, haciendo uso desde un simple sistema jerárquico hasta un ligeramente más complejo sistema centralizado. En este apartado Git gana puntos sobre la competencia, admitiendo multitud de configuraciones que nos permitirán dentro de su estructura organizar el trabajo tal y como deseemos nosotros, nuestro equipo de desarrollo, etc… 
+ 
+•	Coste : Obviamente podremos encontrar software de control de versiones que nos ofrezcan las mismas o similares características que nos otorga Git o BitBucket entre otros, pero lo que será complejo es que alguna de estas alternativas sea gratuita. Los sistemas de hosting pueden llegar a presentar algún coste, pero entrará en nuestro juicio contemplar si realizar una pequeña inversión en infraestructura online (asegurando ya de paso un poco más el acceso y seguridad de nuestro proyecto) o adquirir una costosa solución similar a los ejemplos ya citados. Poniéndonos en la piel de un empresario, creo que cuanto más consigamos ahorrar a la empresa mejor para la empresa (y para nosotros demostrando preocupación por los recursos económicos de la misma).
+Desventaja
+•	Aprendizaje : Es algo por lo que tendremos que pasar cada vez que queramos incluir alguna nueva tecnología en un flujo de trabajo ya establecido. Deberemos formar al equipo de desarrollo o a aquellas personas a las que tendremos que dar acceso a nuestro trabajo en el servicio de control de versiones; para evitar así posibles errores en la realización de cambios (salvables por su puesto al estar ahí el registro de cambios y versiones).
+
+
+
